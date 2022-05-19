@@ -1,0 +1,52 @@
+body {
+    margin:                  0;
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing:  antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #F7F7F7;
+    color: #131313;
+}
+
+button:focus {
+    outline: none;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base, components, utilities{
+    .btn, .ant-btn {
+        @apply rounded-2xl px-3 py-2 border-2 border-gray-100 text-sm font-medium text-gray-700;
+        transition: all 0.3s ease-in-out;
+
+    }
+
+    .btn-primary, .ant-btn-primary {
+        @apply bg-blue-500 text-white hover:bg-blue-700 hover:text-gray-200;
+    }
+
+    .btn-green {
+        @apply bg-green-600 text-white hover:bg-green-800 hover:text-gray-200;
+    }
+
+    .btn-red {
+        @apply bg-red-500 text-white hover:bg-red-700 hover:text-gray-200;
+    }
+
+    .content-hover{
+        @apply hover:text-white duration-300 transition-all ease-in-out hover:bg-blue-500 rounded-lg;
+    }
+}
+
+/*Ant Modal*/
+.ant-modal-content{
+    border-radius: 10px;
+}
+
+.ant-modal-header{
+    border-radius: 10px 10px 0 0;
+}
+.ant-modal-body{
+    border-radius: 0 0 10px 10px;
+}
